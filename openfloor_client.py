@@ -99,7 +99,7 @@ class OpenFloorClient:
                 events = envelope_data.get('events', [])
                 
                 for event in events:
-                    if event.get('eventType') in ['publishManifests', 'publishManifest']:
+                    if event.get('eventType') == 'publishManifests':
                         parameters = event.get('parameters', {})
                         manifests = parameters.get('servicingManifests', [])
                         
